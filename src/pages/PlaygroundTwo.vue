@@ -1,5 +1,5 @@
 <template>
-  <default-page>
+  <default-page scroll>
     <test-one />
     <test-two />
     <test-three />

@@ -1,39 +1,45 @@
 <template>
-  <div class="container">
-    <div class="leader">
-      <router-link to="/">
-        <img
-          class="logo"
-          src="/logo.png"
-          alt="logo"
-        >
-      </router-link>
+  <transition name="fade">
+    <div
+      v-if="showHeader"
+      class="container"
+    >
+      <div class="leader">
+        <router-link to="/">
+          <img
+            class="logo"
+            src="/logo.png"
+            alt="logo"
+          >
+        </router-link>
 
-      <h2 class="title">
-        Page: {{ route.name }}
-      </h2>
+        <h2 class="title">
+          Page: {{ route.name }}
+        </h2>
+      </div>
+
+      <nav>
+        <ul>
+          <li
+            v-for="rt in routes"
+            :key=" rt.path"
+          >
+            <router-link :to="rt.path">
+              {{ rt.name }}
+              <span :class="rt.visit ? 'visit' : ''">
+              </span>
+            </router-link>
+          </li>
+        </ul>
+      </nav>
     </div>
-
-    <nav>
-      <ul>
-        <li
-          v-for="rt in routes"
-          :key=" rt.path"
-        >
-          <router-link :to="rt.path">
-            {{ rt.name }}
-            <span :class="rt.visit ? 'visit' : ''">
-            </span>
-          </router-link>
-        </li>
-      </ul>
-    </nav>
-  </div>
+  </transition>
 </template>
   
 <script setup lang='ts'>
-import { reactive } from 'vue'
+import { reactive, ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
+import { scrollTop } from '@/utils'
 
 const route = useRoute()
 
@@ -50,6 +56,15 @@ const routes = reactive([
   },
 ])
 
+const showHeader = ref(true)
+
+watch(() => scrollTop.value, (newVal) => {
+  if (newVal > 300) {
+    showHeader.value = false
+  } else {
+    showHeader.value = true
+  }
+})
 </script>
   
 <style scoped lang="scss">
