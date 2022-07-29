@@ -9,10 +9,10 @@
         @click="onClickTab(i)"
       >
         <div class="icon-text">
-          <ion-icon
+          <!-- <ion-icon
             class="icon"
             :name="tab.icon"
-          />
+          /> -->
 
           <transition name="tab-slide">
             <span
@@ -23,14 +23,13 @@
             </span>
           </transition>
         </div>
-        <ion-ripple-effect />
+        <!-- <ion-ripple-effect /> -->
       </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-// import { IonIcon, IonRippleEffect } from '@ionic/vue'
 import { ref } from 'vue'
 
 const tabs = [

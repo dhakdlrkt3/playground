@@ -1,7 +1,5 @@
 <template>
   <div class="container">
-    <div class="dummy" />
-
     <div class="banner">
       banner
       <button
@@ -97,14 +95,14 @@
 <script setup lang="ts">
 import { scrollTop } from '@/utils'
 import { ref, watch } from 'vue'
-// console.time('one')
+console.time('one')
 // let sum = 0
 // for (let i = 0; i < 1e3; i++) {
 //   console.log(i)
 //   sum += i
 // }
 // console.log('결과: sum =>', sum)
-// console.timeEnd('one')
+console.timeEnd('one')
 
 const box1 = ref(false)
 const boxs = ref<boolean[]>(new Array(3 * 2).fill(false))
@@ -139,11 +137,6 @@ watch(() => scrollTop.value, (top: number) => {
 </script>
 
 <style scoped lang="scss">
-.dummy {
-  background-color: grey;
-  height: 80px;
-}
-
 .banner {
   position: relative;
   width: 100%;
@@ -151,6 +144,7 @@ watch(() => scrollTop.value, (top: number) => {
   line-height: 400px;
   text-align: center;
   background-color: grey;
+  font-size: #{to-rem(30)};
   margin-bottom: 200px;
 
   .play-button {

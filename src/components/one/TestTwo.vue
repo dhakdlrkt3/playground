@@ -15,14 +15,14 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref, watch } from 'vue'
+import { watch } from 'vue'
 import { scrollTop } from '@/utils'
 
 // 3300 ~ 6000
-watch(() => scrollTop.value, (globalScrollTop: number) => {
-  console.log('top => ', globalScrollTop)
+// watch(() => scrollTop.value, (globalScrollTop: number) => {
+//   console.log('top => ', globalScrollTop)
 
-})
+// })
 
 </script>
 

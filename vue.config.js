@@ -1,10 +1,19 @@
 const { defineConfig } = require('@vue/cli-service')
+const path = require('path')
+
 module.exports = defineConfig({
   transpileDependencies: true,
+  configureWebpack: {
+    resolve: {
+      alias: {
+        '@/': path.resolve(__dirname, 'src/*'),
+      },
+    },
+  },
   css: {
     loaderOptions: {
       sass: {
-        prependData: '@import "@/theme/index.scss";',
+        additionalData: '@import "@/theme/index.scss";',
       },
     },
   },

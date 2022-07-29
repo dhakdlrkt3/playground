@@ -39,6 +39,7 @@ module.exports = {
     'vue/no-mutating-props': 'warn',
     'vue/no-deprecated-slot-attribute': 'off',
     'vue/no-multiple-template-root': 'off',
+    'vue/component-name-in-template-casing': ['error', 'kebab-case'],
     // conflict with @typescript-eslint
     'brace-style': 'off',
     'comma-spacing': 'off',
