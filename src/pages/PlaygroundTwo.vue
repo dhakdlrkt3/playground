@@ -1,8 +1,5 @@
 <template>
-  <default-page
-    title="playground Two"
-    scroll
-  >
+  <default-page>
     <test-one />
     <test-two />
     <test-three />

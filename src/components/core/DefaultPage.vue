@@ -1,35 +1,25 @@
 <template>
   <div id="header">
-    <slot name="header">
-      <div class="header-container">
-        {{ title }}
-      </div>
-    </slot>
+    <div class="header-container">
+      <slot name="header">
+        <header-view />
+      </slot>
+    </div>
   </div>
 
-  <div
-    id="contents"
-    ref="contents"
-  >
+  <div id="contents">
     <div class="contents-container">
       <slot />
     </div>
   </div>
 
-
-  <div
-    v-if="$slots.footer"
-    id="footer"
-  >
-    <slot name="footer">
-      <div class="footer-container">
-      </div>
-    </slot>
-  </div>
+  <footer-view />
 </template>
 
 <script setup lang="ts">
 import { defineProps, onBeforeUnmount, onMounted } from 'vue'
+import HeaderView from '@/components/core/HeaderView.vue' 
+import FooterView from '@/components/core/FooterView.vue' 
 import { scrollTop } from '@/utils'
 
 const props = defineProps({
@@ -45,7 +35,6 @@ const props = defineProps({
 
 function onScroll () {
   scrollTop.value = document.documentElement.scrollTop
-  console.log('scrollTop => ', scrollTop.value)
 }
 
 onMounted(() => {
@@ -60,3 +49,10 @@ onBeforeUnmount(() => {
 })
 
 </script>
+
+<style scoped lang="scss">
+#contents {
+  min-height: calc(100vh - 75px - 300px);
+}
+
+</style>

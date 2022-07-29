@@ -4,17 +4,17 @@ import HomePage from '@/pages/HomePage.vue'
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    name: 'home',
+    name: 'HOME',
     component: HomePage,
   },
   {
     path: '/one',
-    name: 'one',
+    name: 'ONE',
     component: () => import(/* webpackChunkName: "one" */ '@/pages/PlaygroundOne.vue'),
   },
   {
     path: '/two',
-    name: 'two',
+    name: 'TWO',
     component: () => import(/* webpackChunkName: "two" */ '@/pages/PlaygroundTwo.vue'),
   },
 ]

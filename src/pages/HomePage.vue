@@ -1,33 +1,27 @@
 <template>
   <default-page>
-    <nav>
-      <router-link to="/one">
-        Playground One 이동
-      </router-link>
-      <router-link to="/two">
-        Playground two 이동
-      </router-link>
-    </nav>
+    <div class="container">
+      <h2>
+        뷰3 플레이그라운드 홈
+      </h2>
+    </div>
   </default-page>
 </template>
 <script setup lang="ts">
 import DefaultPage from '@/components/core/DefaultPage.vue' 
 
 </script>
-<style lang="scss">
-nav {
-  padding: 30px;
+<style lang="scss" scoped>
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 300px - 75px);
 
-  a {
-    display: block;
-    font-weight: bold;
-    color: #2c3e50;
-    font-size: 3rem;
-    margin-bottom: 20px;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+  h2 {
+    font-size: #{to-rem(42)};
   }
 }
+
 </style>
