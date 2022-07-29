@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ion-grid,
+ion-row,
+ion-col {
+  padding: 0px;
+  margin: 0px;
+}
+
+ion-header,
+ion-toolbar {
+  --min-height: 45px;
+
+  height: 45px;
+}
+
+ion-header {
+  &.md {
+    &::after {
+      display: none;
+    }
+  }
+}
+
+ion-toolbar {
+  border-bottom: solid 1px var(--custom-color-8);
+
+  &.ios {
+    --border-width: 0px;
+  }
+}
+
+ion-img {
+  display: inline-block;
+}
+
+img {
+  -webkit-user-drag: none;
+}
+
+div,
+h1,
+img,
+h2,
+h3 {
+  -ms-user-select: none;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.gj-service-detail .modal-wrapper {
+  border-radius: 25px 25px 0 0;
+}
+
+@media (min-width: 769px) {
+  .gj-service-detail .modal-wrapper {
+    --width: 90%;
+    --height: 90%;
+
+    border-radius: 25px;
+  }
+}

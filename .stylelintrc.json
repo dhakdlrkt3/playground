@@ -1,0 +1,30 @@
+{
+  "extends": [
+    "stylelint-config-standard-scss",
+    "stylelint-config-recommended-vue",
+    "stylelint-config-html"
+  ],
+  "overrides": [
+    {
+      "files": ["**/*.(scss|css|html|vue)"],
+      "customSyntax": "postcss-scss"
+    },
+    {
+      "files": ["**/*.(html|vue)"],
+      "customSyntax": "postcss-html"
+    }
+  ],
+  "rules": {
+    "at-rule-no-unknown": null, 
+    "scss/at-rule-no-unknown": true,
+    "string-quotes": "single",
+    "indentation": 2,
+    "selector-class-pattern": null,
+    "length-zero-no-unit": null,
+    "selector-type-no-unknown": [true, { "ignoreTypes": ["/ion-/"] }],
+    "selector-pseudo-class-no-unknown": [true, {"ignorePseudoClasses":["deep"]}],
+    "property-no-vendor-prefix": null,
+    "value-no-vendor-prefix": null,
+    "max-line-length": 150
+  }
+}

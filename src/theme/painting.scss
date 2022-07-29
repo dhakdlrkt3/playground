@@ -1,0 +1,15 @@
+:root {
+  @include default-font;
+  @include default-color;
+  @include custom-color;
+  @include ionic-color;
+}
+
+// @media (prefers-color-scheme: dark) {
+//   :root {
+//     @include default-font;
+//     @include default-color-dark;
+//     @include custom-color;
+//     @include ionic-color;
+//   }
+// }

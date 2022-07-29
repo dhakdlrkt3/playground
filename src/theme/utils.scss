@@ -1,0 +1,33 @@
+@mixin image-render {
+  image-rendering: -moz-crisp-edges;         /* Firefox */
+  image-rendering: -o-crisp-edges;         /* Opera */
+  image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+@function to-rem($value) {
+  $rem-value: calc($value / 16) + rem;
+
+  @return $rem-value;
+}
+
+@mixin platform-header {
+  .container {
+    text-align: center;
+
+    .container-text {
+      .text__title {
+        font-weight: bold;
+        letter-spacing: -0.02em;
+      }
+
+      .text__description {
+        color: var(--custom-color-13);
+        letter-spacing: -0.02em;
+      }
+    }
+  }
+}
