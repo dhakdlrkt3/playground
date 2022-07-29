@@ -1,15 +1,20 @@
 <template>
-  <div id="header">
-    <div class="header-container">
-      <slot name="header">
-        <header-view />
-      </slot>
+  <div id="app-screen">
+    <div id="header">
+      <div class="header-container">
+        <slot name="header">
+          <header-view />
+        </slot>
+      </div>
     </div>
-  </div>
 
-  <div id="contents">
-    <div class="contents-container">
-      <slot />
+    <div id="contents">
+      <div class="contents-container">
+        <slot />
+      </div>
+      <div class="fab-container">
+        <slot name="fab" />
+      </div>
     </div>
   </div>
 
@@ -28,6 +33,10 @@ const props = defineProps({
     default: '',
   },
   scroll: {
+    type: Boolean,
+    default: false,
+  },
+  fab: {
     type: Boolean,
     default: false,
   },
@@ -51,8 +60,26 @@ onBeforeUnmount(() => {
 </script>
 
 <style scoped lang="scss">
+#app-screen {
+  position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.header-container {
+  position: absolute;
+  top: 0px;
+}
+
 #contents {
   min-height: calc(100vh - 75px - 300px);
+  padding-top: 75px;
+}
+
+.fab-container {
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
 }
 
 </style>

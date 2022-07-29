@@ -58,23 +58,28 @@ const routes = reactive([
 
 const showHeader = ref(true)
 
-watch(() => scrollTop.value, (newVal) => {
-  if (newVal > 300) {
-    showHeader.value = false
-  } else {
-    showHeader.value = true
-  }
-})
+// watch(() => scrollTop.value, (newVal) => {
+//   if (newVal > 300) {
+//     showHeader.value = false
+//   } else {
+//     showHeader.value = true
+//   }
+// })
 </script>
   
 <style scoped lang="scss">
 .container {
+  position: fixed;
+  z-index: 100;
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: silver;
-  height: 55px;
-  padding: 10px 25px;
+  max-width: 1440px;
+  width: 100%;
+  height: 75px;
+  padding: 10px 35px;
 
   .logo {
     display: inline-block;
