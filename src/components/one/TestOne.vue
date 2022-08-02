@@ -1,7 +1,10 @@
 <template>
   <div class="container">
     <div class="banner">
-      banner
+      모든 국민은 학문과 예술의 자유를 가진다. 헌법재판소 재판관은 탄핵 또는 금고 이상의 형의 선고에 의하지 아니하고는 파면되지 아니한다. 사면·감형 및 복권에 관한 사항은 법률로 정한다. 국가안전보장에 관련되는 대외정책·군사정책과 국내정책의 수립에 관하여 국무회의의 심의에 앞서 대통령의 자문에 응하기 위하여 국가안전보장회의를 둔다.
+
+      비상계엄이 선포된 때에는 법률이 정하는 바에 의하여 영장제도, 언론·출판·집회·결사의 자유, 정부나 법원의 권한에 관하여 특별한 조치를 할 수 있다. 국회는 국민의 보통·평등·직접·비밀선거에 의하여 선출된 국회의원으로 구성한다. 대통령이 임시회의 집회를 요구할 때에는 기간과 집회요구의 이유를 명시하여야 한다.
+      
       <button
         class="play-button"
         @click="onTriggerAnimation"
@@ -139,12 +142,12 @@ watch(() => scrollTop.value, (top: number) => {
 <style scoped lang="scss">
 .banner {
   position: relative;
-  width: 100%;
   height: 400px;
-  line-height: 400px;
+  line-height: 1.2;
   text-align: center;
   background-color: grey;
   font-size: #{to-rem(30)};
+  padding: 20px;
   margin-bottom: 200px;
 
   .play-button {
