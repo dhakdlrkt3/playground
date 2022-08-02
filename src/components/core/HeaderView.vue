@@ -53,6 +53,11 @@ const routes = reactive([
     name: 'TWO',
     visit: route.path === '/two',
   },
+  {
+    path: '/three',
+    name: 'THREE',
+    visit: route.path === '/three',
+  },
 ])
 
 const showHeader = ref(true)
