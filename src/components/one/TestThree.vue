@@ -1,5 +1,9 @@
 <template>
   <div class="container">
+    <div>
+      <font-awesome-icon icon="fa-solid fa-star" />
+      <font-awesome-icon icon="fa-regular fa-star" />
+    </div>
     <div class="tab-bar">
       <div
         v-for="tab, i in tabs"

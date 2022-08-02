@@ -37,9 +37,8 @@
 </template>
   
 <script setup lang='ts'>
-import { reactive, ref, watch } from 'vue'
+import { reactive, ref } from 'vue'
 import { useRoute } from 'vue-router'
-import { scrollTop } from '@/utils'
 
 const route = useRoute()
 
@@ -58,13 +57,6 @@ const routes = reactive([
 
 const showHeader = ref(true)
 
-// watch(() => scrollTop.value, (newVal) => {
-//   if (newVal > 300) {
-//     showHeader.value = false
-//   } else {
-//     showHeader.value = true
-//   }
-// })
 </script>
   
 <style scoped lang="scss">
