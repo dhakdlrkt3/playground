@@ -9,13 +9,18 @@
   
 <script setup lang='ts'>
 function onFab () {
-  console.log('clicked!')
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  })
 }
 </script>
   
 <style lang="scss" scoped>
   .container {
     position: fixed;
+    bottom: 50px;
+    right: calc(calc(calc(100vw - 1440px) / 2) + 50px);
     width: 80px;
     height: 80px;
     line-height: 80px;

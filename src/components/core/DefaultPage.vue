@@ -66,20 +66,9 @@ onBeforeUnmount(() => {
   margin: 0 auto;
 }
 
-.header-container {
-  position: absolute;
-  top: 0px;
-}
-
 #contents {
   min-height: calc(100vh - 75px - 300px);
   padding-top: 75px;
-}
-
-.fab-container {
-  position: absolute;
-  bottom: 25px;
-  right: 25px;
 }
 
 </style>
