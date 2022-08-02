@@ -7,7 +7,6 @@
       loading="lazy"
       alt="iamge-1"
     >
-    <!-- url로 가져오기 -->
     <!-- <img
       v-for="num in idxs"
       :key="num"
@@ -19,6 +18,8 @@
 </template>
 
 <script setup lang="ts">
+// Testname = 1. 같은 파일을 외부에서 가져오는 것과 같은 서버에 있는 것 차이 비교해보기
+// Testname = 2. 네이티브 로딩 테스트해보기
 const idxs = [86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96]
 </script>
 

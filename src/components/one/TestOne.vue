@@ -98,6 +98,7 @@
 <script setup lang="ts">
 import { scrollTop } from '@/utils'
 import { ref, watch } from 'vue'
+// Testname = 애니메이션 테스트
 console.time('one')
 // let sum = 0
 // for (let i = 0; i < 1e3; i++) {

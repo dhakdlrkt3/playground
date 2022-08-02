@@ -54,7 +54,6 @@ onMounted(() => {
 
 onBeforeUnmount(() => {
   window.removeEventListener('scroll', onScroll)
-  console.log('removed')
 })
 
 </script>

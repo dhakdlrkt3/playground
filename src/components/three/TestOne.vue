@@ -1,14 +1,9 @@
 <template>
   <div class="container">
-    container
+    테스트
   </div>
 </template>
 
 <script setup lang="ts">
+// Testname = 테스트 대기
 </script>
-
-<style scoped lang="scss">
-.container {
-  opacity: 1;
-}
-</style>
